@@ -5,7 +5,7 @@ header {
   align-items: center;
   /* padding: 0 34px; */
   height: 80px;
-  background-color: #2b3844;
+  background-color: #ffffff;
 }
 header > div {
   display: flex;
@@ -16,7 +16,7 @@ main {
   display: flex;
   width: 100vw;
   height: calc(100vh - 80px);
-  background-color: #202c36;
+  background-color: #fafafa;
 }
 
 /****** header ******/
@@ -24,7 +24,8 @@ main {
 h1 {
   width: 248px;
   height: 100%;
-  border-right: 1px solid #35404c;
+  border-right: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
   padding-left: 30px;
   line-height: 80px;
 }
@@ -37,25 +38,48 @@ h1 a {
   position: relative;
   display: flex;
 }
+.alaram{
+  position: relative;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.alaram.send::after{
+  position: absolute;
+  right: 20%;
+  top: 48%;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #2a87eb;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+}
+.alaram i{
+  color: #878787;
+}
 .toggle-btn {
   display: flex;
   align-items: center;
 }
 .toggle-btn span {
-  margin-right: 10px;
   font-size: .88rem;
+  color: #7f7f7f;
 }
 .toggle-btn .img {
   display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-image: linear-gradient(-15deg, #4cd964, #e8ff00);
+  width: 35px;
+  height: 35px;
+  background-image: linear-gradient(-15deg,  #f677ec,#fda65f);
   border-radius: 100%;
   overflow: hidden;
+  color: #ffffff;
+  line-height: 35px;
 }
 .toggle-btn i {
   margin-left: 10px;
   font-size: .7rem;
+  color: #7f7f7f;
 }
 .toggle-btn + input {
   width: 0;
@@ -66,10 +90,10 @@ h1 a {
   top: 2.5rem;
   right: 0;
   width: 200px;
-  border: 1px solid rgb(243, 243, 243);
+  /* border: 1px solid rgb(243, 243, 243); */
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgb(226 226 226 / 30%);
 }
 .toggle-content p {
   padding: 5px;
@@ -106,13 +130,13 @@ aside {
   flex-direction: column;
   width: 248px;
   height: 100%;
-  border-top: 1px solid #35404c;
-  background-color: #2b3844;
+  background-color: #ffffff;
 }
 aside nav h3 {
   padding: 40px 34px 25px;
   font-size: 1rem;
   font-weight: 400;
+  color: #7f7f7f;
 }
 .gnb li {
   position: relative;
@@ -126,12 +150,13 @@ aside nav h3 {
 }
 .gnb li a i {
   margin-right: 20px;
+  color: #b3b3b3;
 }
 .gnb li a.active{
-  background-color: #394752;
+  background-color: #ecf3fc;
 }
 .gnb li a.active *{
-  color: #4cd964;
+  color: #0072ea;
 }
 .gnb li a.active:after {
   position: absolute;
@@ -141,7 +166,7 @@ aside nav h3 {
   display: block;
   width: 5px;
   height: 48px;
-  background-color: #4cd964;
+  background-color: #0072ea;
 }
 .contact-menu {
   display: flex;
@@ -157,6 +182,10 @@ aside nav h3 {
 }
 .contact-menu li a i {
   margin-right: 20px;
+  color: #ff9500;
+}
+.contact-menu li:last-of-type a i{
+  color: #8138ff;
 }
 
 /****** content ******/
@@ -164,6 +193,7 @@ aside nav h3 {
   padding: 60px 28px;
   width: calc(100% - 248px);
   height: 100%;
+  box-shadow: inset 0 0 3px rgb(243 243 243 / 80%);
   overflow: overlay;
 }
 .content h2 {
@@ -175,17 +205,20 @@ aside nav h3 {
   display: inline-block;
   margin: 30px;
   padding: 30px;
-  background-color: #2a3743;
+  background-color: #ffffff;
   border-radius: 10px;
   font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.5rem;
   word-break: break-all;
-  box-shadow: 0 0 30px #1b252f;
+  box-shadow: 0 0 30px #eeeeee;
 }
 .content > section > b {
   display: inline-block;
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 1rem;
+}
+.content > section > b + p{
+  color: #7e7e7e;
 }

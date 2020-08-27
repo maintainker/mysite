@@ -36,7 +36,7 @@ class Header extends Component {
           </NavLink>
         </h1>
         <div className="toggle-wrap">
-          <button class="alaram send"><i class="xi-bell-o"></i></button>
+          <button className="alaram send"><i className="xi-bell-o"></i></button>
           <button className="toggle-btn" onClick={this.showMenu}>
             <span className="img">M</span>
             <i className="xi-angle-down"></i>

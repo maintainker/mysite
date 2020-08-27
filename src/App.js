@@ -12,18 +12,18 @@ import Aside from "./components/Aside";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="wrap">
           <Header />
           <main>
             <Aside />
             <section className="content">
               <Switch>
-                <Route exact path={"/"} component={Home} />
-                <Route path={"/about"} component={About} />
-                <Route path={"/project"} component={Project} />
-                <Route path={"/hobby"} component={Hobby} />
-                <Route path={"/work"} component={Work} />
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/project" component={Project} />
+                <Route path="/hobby" component={Hobby} />
+                <Route path="/work" component={Work} />
               </Switch>
             </section>
           </main>

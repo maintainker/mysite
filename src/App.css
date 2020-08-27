@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+/****** layout ******/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 34px; */
+  height: 80px;
+  background-color: #2b3844;
+}
+header > div {
+  display: flex;
+  align-items: center;
+  margin-right: 58px;
+}
+main {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: #202c36;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/****** header ******/
+/* 로고 */
+h1 {
+  width: 248px;
+  height: 100%;
+  border-right: 1px solid #35404c;
+  padding-left: 30px;
+  line-height: 80px;
+}
+h1 a {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 프로필 메뉴 */
+.toggle-wrap {
+  position: relative;
+  display: flex;
+}
+.toggle-btn {
+  display: flex;
+  align-items: center;
+}
+.toggle-btn span {
+  margin-right: 10px;
+  font-size: .88rem;
+}
+.toggle-btn .img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: linear-gradient(-15deg, #4cd964, #e8ff00);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.toggle-btn i {
+  margin-left: 10px;
+  font-size: .7rem;
+}
+.toggle-btn + input {
+  width: 0;
+}
+/* 프로필 메뉴 리스트 */
+.toggle-content {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 200px;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .2);
+}
+.toggle-content p {
+  padding: 5px;
+}
+.toggle-content p button:last-child {
+  margin-bottom: 0;
+}
+.toggle-content p.gubun {
+  border-top: 1px solid rgb(243, 243, 243);
+}
+.toggle-content button {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  border: 0;
+  text-align: left;
+  border-radius: 5px;
+  background: none;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+.toggle-content button:hover {
+  background: #f7f7f7;
+  color: #333;
+}
+.toggle-content p.gubun button:hover {
+  background: rgb(255, 239, 241);
+  color: rgb(255, 57, 57);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/****** aside ******/
+aside {
   display: flex;
   flex-direction: column;
+  width: 248px;
+  height: 100%;
+  border-top: 1px solid #35404c;
+  background-color: #2b3844;
+}
+aside nav h3 {
+  padding: 40px 34px 25px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.gnb li {
+  position: relative;
+}
+.gnb li a {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 34px;
+  line-height: 48px;
+  font-size: 0.88rem;
+}
+.gnb li a i {
+  margin-right: 20px;
+}
+.gnb li a.active{
+  background-color: #394752;
+}
+.gnb li a.active *{
+  color: #4cd964;
+}
+.gnb li a.active:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 48px;
+  background-color: #4cd964;
+}
+.contact-menu {
+  display: flex;
+  flex-direction: column;
+}
+.contact-menu li {
+  display: block;
+  padding-left: 34px;
+  line-height: 48px;
+}
+.contact-menu li a {
+  font-size: 0.88rem;
+}
+.contact-menu li a i {
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/****** content ******/
+.content {
+  padding: 60px 28px;
+  width: calc(100% - 248px);
+  height: 100%;
+  overflow: overlay;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content h2 {
+  margin: 0 30px 10px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.content > section {
+  display: inline-block;
+  margin: 30px;
+  padding: 30px;
+  background-color: #2a3743;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+  word-break: break-all;
+  box-shadow: 0 0 30px #1b252f;
+}
+.content > section > b {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1rem;
 }

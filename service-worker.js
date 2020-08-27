@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mountainUI/mysite/precache-manifest.1eb563d2c7eef117c59568288d42fc8b.js"
+  "/mountainUI/mysite/precache-manifest.e1b493591f1aa85c72eb9c5990260476.js"
 );
 
 self.addEventListener('message', (event) => {

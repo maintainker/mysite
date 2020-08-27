@@ -36,11 +36,9 @@ class Header extends Component {
           </NavLink>
         </h1>
         <div className="toggle-wrap">
+          <button class="alaram send"><i class="xi-bell-o"></i></button>
           <button className="toggle-btn" onClick={this.showMenu}>
-            <span className="img">
-              {/* <img src="./assets/images/mountain.jpeg" alt="" /> */}
-            </span>
-            <span className="ko">박산아</span>
+            <span className="img">M</span>
             <i className="xi-angle-down"></i>
           </button>
 

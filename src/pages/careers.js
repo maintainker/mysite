@@ -4,7 +4,7 @@ class Work extends Component {
   render() {
     return (
       <>
-        <h2>Work</h2>
+        <h2>Careers</h2>
         <section className="ko">룰ㄹ룰랄랄ㄹ</section>
         <section>
           <b>Abstract Design</b>

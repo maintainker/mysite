@@ -9,7 +9,7 @@ class Aside extends Component {
           <h3>MENU</h3>
           <ul className="gnb">
             <li>
-              <NavLink to={"/about"}>
+              <NavLink exact to={"/"}>
                 <i className="xi-face"></i>
                 <span>About</span>
               </NavLink>
@@ -29,7 +29,7 @@ class Aside extends Component {
             <li>
               <NavLink to={"/work"}>
                 <i className="xi-briefcase"></i>
-                <span>Work</span>
+                <span>Careers</span>
               </NavLink>
             </li>
           </ul>
